@@ -17,12 +17,17 @@ namespace ConsoleDemo
             var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
             XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
 
-            Console.WriteLine("Hello World!");
-            
-            // Log some things
-            log.Info("Hello logging world!");
-            log.Error("Error!");
-            log.Warn("Warn!");
+            //Console.WriteLine("Hello World!");
+
+            //// Log some things
+            //log.Info("Hello logging world!");
+            //log.Error("Error!");
+            //log.Warn("Warn!");
+
+            for (int i = 0; i < int.MaxValue; i++)
+            {
+                log.Info("Hello logging world!");
+            }
 
             Console.ReadLine();
         }
